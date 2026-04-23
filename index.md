@@ -26,6 +26,21 @@ Large language models (LLMs) frequently generate defective outputs in code gener
 
 ---
 
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;">
+  <div class="paper-card" style="margin-bottom: 0; text-align: center;">
+    <div style="font-size: 2rem; font-weight: 800; color: var(--accent-blue);">114</div>
+    <div style="font-size: 0.8rem; color: var(--text-muted);">Primary Studies Reviewed</div>
+  </div>
+  <div class="paper-card" style="margin-bottom: 0; text-align: center;">
+    <div style="font-size: 2rem; font-weight: 800; color: var(--accent-purple);">18</div>
+    <div style="font-size: 0.8rem; color: var(--text-muted);">Propagation Mechanisms</div>
+  </div>
+  <div class="paper-card" style="margin-bottom: 0; text-align: center;">
+    <div style="font-size: 2rem; font-weight: 800; color: #3fb950;">9</div>
+    <div style="font-size: 0.8rem; color: var(--text-muted);">Quality Dimensions</div>
+  </div>
+</div>
+
 ## 📖 Abstract
 
 <div class="abstract-box">

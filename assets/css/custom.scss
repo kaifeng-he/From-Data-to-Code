@@ -1,102 +1,139 @@
 ---
 ---
 
-/* Custom high-end styles for From-Data-to-Code */
-
+/* --- 全局视觉基因升级 --- */
 :root {
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --accent-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-dark: #0a0c10;
+    --bg-card: #161b22;
+    --accent-blue: #58a6ff;
+    --accent-purple: #bc8cff;
+    --text-main: #c9d1d9;
+    --text-muted: #8b949e;
+    --glass: rgba(22, 27, 34, 0.7);
+    --border: rgba(255, 255, 255, 0.1);
 }
 
 body {
-    background-color: #0d1117;
-    font-family: 'Inter', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-dark);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
 }
 
-.site-header {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--glass-border);
+/* 标题高级感：渐变 + 字间距 */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(120deg, #fff 30%, var(--accent-blue) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 1.5em;
 }
 
-.main-content img {
+/* --- 论文卡片 (Paper Card) 设计 --- */
+.paper-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: zoom-in;
-}
-
-.main-content img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.btn-primary {
-    background: var(--accent-gradient);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: opacity 0.3s;
-}
-
-.btn-primary:hover {
-    opacity: 0.9;
-}
-
-/* Glassmorphism for tables */
-table {
-    background: var(--glass-bg);
-    border-collapse: separate;
-    border-spacing: 0;
-    border: 1px solid var(--glass-border);
-    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
     overflow: hidden;
 }
 
-th {
-    background: rgba(255,255,255,0.1);
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+.paper-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
-td, th {
-    padding: 12px 15px;
-    border-bottom: 1px solid var(--glass-border);
+.paper-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 4px; height: 100%;
+    background: linear-gradient(to bottom, var(--accent-blue), var(--accent-purple));
+    opacity: 0.7;
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-    width: 8px;
+.paper-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f0f6fc;
+    line-height: 1.4;
 }
 
-::-webkit-scrollbar-track {
-    background: #0d1117;
+.paper-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
-::-webkit-scrollbar-thumb {
-    background: #30363d;
-    border-radius: 4px;
+.paper-tag {
+    background: rgba(88, 166, 255, 0.1);
+    color: var(--accent-blue);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.75rem;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #484f58;
+.paper-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    text-decoration: none;
 }
 
-/* Title gradient */
-h1, h2 {
-    background: linear-gradient(to right, #fff, #ccc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
+.paper-link:hover {
+    text-decoration: underline;
 }
 
-/* Specific highlight for abstract */
+/* --- 页面元素优化 --- */
 .abstract-box {
-    padding: 20px;
-    background: rgba(118, 75, 162, 0.1);
-    border-left: 4px solid #764ba2;
-    border-radius: 4px;
-    margin: 20px 0;
+    background: linear-gradient(135deg, rgba(88, 166, 255, 0.05) 0%, rgba(188, 140, 255, 0.05) 100%);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent-blue);
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-style: italic;
+    color: #d1d5db;
+}
+
+/* 表格高级化 */
+table {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border) !important;
+}
+
+th {
+    background: #1c2128 !important;
+    color: var(--accent-blue) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+td {
+    background: var(--bg-card);
+    border-color: var(--border) !important;
+}
+
+/* 导航栏毛玻璃 */
+.side-bar {
+    background-color: rgba(13, 17, 23, 0.8) !important;
+    backdrop-filter: blur(12px);
+    border-right: 1px solid var(--border);
 }

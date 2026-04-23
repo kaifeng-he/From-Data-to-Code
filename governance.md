@@ -36,3 +36,8 @@ We synthesize a **Multi-layered Governance Framework** spanning the data lifecyc
   <img src="images/data_quality_issues_mitigation.png" alt="Taxonomy of Dataset Issue Mitigation Strategies" width="100%" style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
   <p><em>Fig. 9. Taxonomy of Training Data Issue Mitigation Strategies</em></p>
 </div>
+
+
+---
+
+## 📄 Referenced Papers
