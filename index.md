@@ -12,7 +12,7 @@ permalink: /
 
 <div style="margin: 20px 0;">
   <a href="{{ '/paper.pdf' | relative_url }}" class="btn btn-primary">📄 View Paper</a>
-  <a href="https://github.com/kaifeng-he/From-Data-to-Code" class="btn btn-outline">💻 GitHub Repo</a>
+  <a href="https://github.com/SYSUSELab/From-Data-to-Code" class="btn btn-outline">💻 GitHub Repo</a>
 </div>
 
 Large language models (LLMs) frequently generate defective outputs in code generation tasks, ranging from logical bugs to security vulnerabilities.
@@ -26,7 +26,7 @@ Large language models (LLMs) frequently generate defective outputs in code gener
 
 ---
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0;">
+<div class="stats-bento">
   <div class="paper-card" style="margin-bottom: 0; text-align: center;">
     <div style="font-size: 2rem; font-weight: 800; color: var(--accent-blue);">114</div>
     <div style="font-size: 0.8rem; color: var(--text-muted);">Primary Studies Reviewed</div>

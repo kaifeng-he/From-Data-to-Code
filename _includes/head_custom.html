@@ -1,4 +1,99 @@
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* --- 核心 UI 覆盖 (强制生效) --- */
+:root {
+    --bg-dark: #0d1117 !important;
+    --bg-card: #161b22 !important;
+    --accent-blue: #58a6ff !important;
+    --accent-purple: #bc8cff !important;
+    --border-color: rgba(240, 246, 252, 0.1) !important;
+}
+
+/* 渐变标题 */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 800 !important;
+    background: linear-gradient(120deg, #ffffff 20%, #58a6ff 80%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    letter-spacing: -0.02em !important;
+}
+
+/* 论文卡片设计 (精修版) */
+.paper-card {
+    background-color: #161b22 !important;
+    border: 1px solid var(--border-color) !important;
+    border-left: 5px solid #58a6ff !important;
+    border-radius: 12px !important;
+    padding: 1.25rem !important;
+    margin-bottom: 1.25rem !important;
+    transition: transform 0.2s, box-shadow 0.2s !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4) !important;
+    position: relative !important;
+}
+
+.paper-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 25px rgba(88, 166, 255, 0.2) !important;
+    border-color: #58a6ff !important;
+}
+
+.paper-title {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #f0f6fc !important;
+    margin: 0 0 10px 0 !important;
+    line-height: 1.4 !important;
+}
+
+.paper-meta {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+.paper-tag {
+    background: rgba(88, 166, 255, 0.15) !important;
+    color: #58a6ff !important;
+    padding: 2px 10px !important;
+    border-radius: 20px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    border: 1px solid rgba(88, 166, 255, 0.3) !important;
+}
+
+.paper-link-btn {
+    color: #8b949e !important;
+    text-decoration: none !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    transition: color 0.2s !important;
+}
+
+.paper-link-btn:hover {
+    color: #58a6ff !important;
+    text-decoration: underline !important;
+}
+
+/* 首页 Bento 统计卡片 */
+.stats-bento {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+/* 修正正文颜色 */
+.main-content, p, li {
+    color: #c9d1d9 !important;
+}
+
+/* 导航栏暗色适配 */
+.side-bar {
+    background-color: #0d1117 !important;
+    border-right: 1px solid var(--border-color) !important;
+}
+</style>
