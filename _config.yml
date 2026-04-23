@@ -1,40 +1,28 @@
-title: "Bridging Generation and Training"
+title: "From Data to Code"
 description: "A Systematic Review of Quality Issues in LLMs for Code"
 remote_theme: just-the-docs/just-the-docs
 
-# URL settings
+# Site settings
 url: "https://kaifeng-he.github.io"
-baseurl: "/From-Data-to-Code"
+baseurl: "" # the subpath of your site, e.g. /blog
 
-# Plugins
-plugins:
-  - jekyll-remote-theme
-  - jekyll-seo-tag
-
-# Theme customization
-color_scheme: light
-# Use a custom footer to hide the "Just the Docs" credit and add your links
-footer_content: >
-  <p><b>More to read:</b> 
-  <a href="https://github.com/SYSUSELab/From-Data-to-Code" target="_blank">GitHub Repository</a> | 
-  <a href="{{ site.baseurl }}/paper.pdf" target="_blank">Download Paper (PDF)</a>
-  </p>
-  <p class="text-small text-grey-dk-000 mb-0">© 2026 Bridging Generation and Training Review Team</p>
-
-last_edit_timestamp: true
-last_edit_label: "Last updated on"
-
-# Navigation structure
-nav_enabled: true
-enable_copy_button: true
+# Search settings
 search_enabled: true
+search:
+  rel_url: true
 
-# Taxonomy settings
+# Color scheme
+color_scheme: "dark"
+
+# Custom CSS
+sass:
+  style: compressed
 aux_links:
   "GitHub Repository":
     - "https://github.com/kaifeng-he/From-Data-to-Code"
 
+# Heading anchor links
 heading_anchors: true
 
-# Use the images folder
-include: ["images"]
+# Footer content
+footer_content: "© 2026 From-Data-to-Code Team. Systematic Review on LLM Code Quality."

@@ -1,80 +1,16 @@
-# Bridging Generation and Training: A Systematic Review of Quality Issues in LLMs for Code
+---
+layout: default
+title: Paper List
+nav_order: 6
+---
 
-<div align="center">
-  <h3>🚀 <a href="https://kaifeng-he.github.io/">View the Academic Website</a></h3>
-</div>
+# 📄 Full Paper List
 
-<br>
-
-## 📖 Abstract
-
-Large language models (LLMs) frequently generate defective outputs in code generation tasks, ranging from logical bugs to security vulnerabilities. While these generation failures are often treated as model-level limitations, empirical evidence increasingly traces their root causes to imperfections within the training corpora. Yet, the specific mechanisms linking training data quality issues to generated code quality issues remain largely unmapped. This paper presents a systematic literature review of 114 primary studies to investigate how training data quality issues propagate into code generation. We establish a unified taxonomy that categorizes generated code quality issues across nine dimensions and training data quality issues into code and non-code attributes. Based on this taxonomy, we formalize a causal framework detailing 18 typical propagation mapping mechanisms. Furthermore, we synthesize state-of-the-art detection and mitigation techniques across the data, model, and generation lifecycles. The reviewed literature reveals a clear methodological shift: quality assurance is transitioning from reactive, heuristic-based post-generation filtering toward proactive, data-centric governance and closed-loop repair. Finally, we identify open challenges and outline research directions for developing reliable LLMs for code through integrated data curation and continuous evaluation. 
-
-<div align="center">
-  <img src="images/paper_collection.png" alt="Overview of the process of paper collection and filtering" width="80%">
-  <p><em>Fig. 1. Overview of the paper collection and filtering process.</em></p>
-</div>
-<br><br>
-<div align="center">
-  <img src="images/lifecycle.png" alt="Lifecycle of Detection and Governance" width="80%">
-  <p><em>Fig. 2. Conceptual Framework of Quality Issues and Mitigation in the LLM Lifecycle.</em></p>
-</div>
+This page contains the complete list of primary studies reviewed in our survey, organized by Research Question (RQ).
 
 ---
 
-## 📢 News
-
-- **[2026-04]** 🚀 The `From-Data-to-Code` repository is officially launched.
-
----
-
-## 📑 Table of Contents
-
-- [Bridging Generation and Training: A Systematic Review of Quality Issues in LLMs for Code](#bridging-generation-and-training-a-systematic-review-of-quality-issues-in-llms-for-code)
-  - [📖 Abstract](#-abstract)
-  - [📢 News](#-news)
-  - [📑 Table of Contents](#-table-of-contents)
-  - [📚 Findings](#-findings)
-    - [💻 RQ1: Generated Code Quality Issues](#-rq1-generated-code-quality-issues)
-    - [📊 RQ2: Training Data Quality Issues](#-rq2-training-data-quality-issues)
-    - [🔗 RQ3: Mapping: Data to Code](#-rq3-mapping-data-to-code)
-    - [🔍 RQ4: Detection Methods](#-rq4-detection-methods)
-      - [1. Code-Level Detection](#1-code-level-detection)
-      - [2. Data-Level Detection](#2-data-level-detection)
-    - [🛠️ RQ5: Governance Strategies](#️-rq5-governance-strategies)
-      - [1. Code-Level Mitigation](#1-code-level-mitigation)
-      - [2. Data-Level Mitigation](#2-data-level-mitigation)
-  - [🤝 Contribution](#-contribution)
-
----
-
-## 📚 Findings
-
-
-
-### 💻 RQ1: Generated Code Quality Issues
-
-We discard vague concepts like generic "code hallucination" and establish a unified taxonomy encompassing **9 core dimensions** of quality issues in LLM-generated code:
-
-1. **Correctness**: Functional accuracy and executability, categorized into syntax errors, logical flaws, and API misuse.
-2. **Security**: Resilience against malicious exploitation, categorized into inherent design flaws and external vulnerabilities.
-3. **Compliance**: Adherence to legal, ethical, and safety standards, categorized into copyright infringement, privacy leakage, and malicious code generation.
-4. **Robustness**: Ability to handle abnormal inputs gracefully, manifesting as inadequate error handling and boundary condition failures.
-5. **Maintainability**: Ease of long-term code modification, categorized into disorganized structure and low reusability.
-6. **Understandability**: Human-readability and clarity, manifesting as poor naming conventions and lack of documentation.
-7. **Efficiency**: Optimal system resource utilization, categorized into suboptimal time complexity and improper memory management.
-8. **Parsimony of Output**: Conciseness of generated results, manifesting as redundant logic, useless loops, and extreme verbosity.
-9. **Miscellaneous**: Anomalies outside the core eight dimensions, primarily manifesting as instruction-following failures.
-
-
-<br>
-
-<div align="center">
-  <img src="images/generated_code_issues.png" alt="Taxonomy of Generated Code Quality Issues" width="100%">
-  <p><em>Fig. 3. Taxonomy of Generated Code Quality Issues</em></p>
-</div>
-
-**📄 Papers Referenced in this Section:**
+## 💻 RQ1
 
 1. LLMs Meet Library Evolution [2024-06] [[paper](https://arxiv.org/abs/2406.09834)]
 2. Copilot Security [2022-04] [[paper](https://arxiv.org/abs/2204.04741)]
@@ -160,30 +96,9 @@ We discard vague concepts like generic "code hallucination" and establish a unif
 82. COFFE [2025-02] [[paper](https://arxiv.org/abs/2502.02827)]
 83. AATK Benchmark [2021-08] [[paper](https://dl.acm.org/doi/10.1145/3610721)]
 
+---
 
-
-
-### 📊 RQ2: Training Data Quality Issues
-
-We categorize intrinsic flaws within pre-training and fine-tuning corpora into **two core dimensions**:
-
-1. **Code Attribute Quality Issues**: Inherent defects within individual code samples that models explicitly learn, categorized into correctness, security, compliance, robustness, maintainability, understandability, and efficiency flaws.
-2. **Non-Code Attribute Quality Issues**: Non-code textual noise and macro-level dataset flaws. Categorized into:
-   - **Compliance and Security Risks (Textual)**: Hazards inherent in textual data, categorized into illegal/harmful, copyright-infringing, and privacy-leaking text.
-   - **Distribution Imbalance Issues**: Skewed dataset proportions, manifesting as imbalances across programming languages, domains, data types, or difficulty levels.
-   - **Redundancy Issues**: Excessive repetition, manifesting as duplicate samples or synthetic data degradation.
-   - **Inadequate Diversity**: Insufficient coverage of real-world scenarios, manifesting as underrepresented edge cases or niche business logic.
-   - **Data Contamination Risks**: Leakage of evaluation data, primarily manifesting as benchmark test sets embedded in training corpora.
-   - **Low-Value Data**: Data contributing little or negatively to learning, categorized into meaningless text, format noise, low-information-density text, erroneous text, and incomplete data.
-
-<br>
-
-<div align="center">
-  <img src="images/data_quality_issues.png" alt="Taxonomy of Dataset Quality Issues" width="100%">
-  <p><em>Fig. 4. Taxonomy of Training Data Quality Issues</em></p>
-</div>
-
-**📄 Papers Referenced in this Section:**
+## 📊 RQ2
 
 1. LLMs Meet Library Evolution [2024-06] [[paper](https://arxiv.org/abs/2406.09834)]
 2. Less is More [2025-02] [[paper](https://arxiv.org/abs/2502.14212)]
@@ -231,21 +146,9 @@ We categorize intrinsic flaws within pre-training and fine-tuning corpora into *
 44. RustEvo^ 2 [2025-03] [[paper](https://arxiv.org/abs/2503.16922)]
 45. AATK Benchmark [2021-08] [[paper](https://dl.acm.org/doi/10.1145/3610721)]
 
-### 🔗 RQ3: Mapping: Data to Code
+---
 
-How do data defects cause code generation failures? We summarize **18 propagation mechanisms** bridging the gap between dataset flaws and generated code defects:
-
-1. **Direct Mappings (10 types)**: The classic "garbage in, garbage out" replication. The model explicitly memorizes dataset flaws and replicates them.
-2. **Indirect Mappings (8 types)**: Insidious propagation. Non-code defects do not inject explicit errors but disrupt the model's internal representations via mechanisms such as _entropy collapse_, _representation bias_, or _semantic drift_.
-
-<br>
-
-<div align="center">
-  <img src="images/sankey.png" alt="Sankey Diagram of Mapping from Data Issues to Code Issues" width="100%">
-  <p><em>Fig. 5. Mapping mechanisms from Training Data Issues to Generated Code Issues.</em></p>
-</div>
-
-**📄 Papers Referenced in this Section:**
+## 🔗 RQ3
 
 1. LLMs Meet Library Evolution [2024-06] [[paper](https://arxiv.org/abs/2406.09834)]
 2. SStuBs [2023-03] [[paper](https://arxiv.org/abs/2303.11455)]
@@ -273,41 +176,9 @@ How do data defects cause code generation failures? We summarize **18 propagatio
 24. DataRecipe [2024-10] [[paper](https://dl.acm.org/doi/10.1145/3691620.3695593)]
 25. LLM-ProS [2025-05] [[paper](https://ieeexplore.ieee.org/document/11028406)]
 
-### 🔍 RQ4: Detection Methods
+---
 
-Detection techniques are evolving from rigid static analysis to dynamic, model-driven, and hybrid evaluation frameworks. They form the diagnostic foundation of LLM quality governance and are classified into two categories:
-
-#### 1. Code-Level Detection
-
-Identifies defects in generated code (e.g., runtime failures, hallucinations, security vulnerabilities) using three main paradigms:
-
-- **Dynamic Analysis**: Test-based execution (unit tests, functional benchmarks) and runtime monitoring to assess execution accuracy and resource efficiency.
-- **Static Analysis**: Rule-based detection (via tools like SonarQube, Semgrep) and manual inspection to find syntax errors, vulnerabilities, and code smells without executing the code.
-- **Model-based Detection**: "LLM-as-a-judge" techniques (direct, prompt-engineered, or fine-tuned evaluation) and lightweight ML classifiers for scalable semantic filtering.
-
-#### 2. Data-Level Detection
-
-Targets the integrity, provenance, and representativeness of the underlying training data:
-
-- **Dynamic Analysis**: Execution-based validation (checking if scraped code compiles) and metric drift monitoring (detecting data leakage or contamination through training loss curves).
-- **Static Analysis**: Rule-based detection, human review, and provenance tracing (using file hashes to identify duplicate or benchmark-contaminated data).
-- **Model-based Detection**: High-throughput semantic screening using LLMs or lightweight classifiers to evaluate sample readability, information entropy, and potential hazards.
-
-<br>
-
-<div align="center">
-  <img src="images/generated_code_issues_detection.png" alt="Taxonomy of Code Issue Detection Methods" width="100%">
-  <p><em>Fig. 6. Taxonomy of Code Issue Detection Techniques</em></p>
-</div>
-
-<br>
-
-<div align="center">
-  <img src="images/data_quality_issues_detection.png" alt="Taxonomy of Dataset Issue Detection Methods" width="100%">
-  <p><em>Fig. 7. Taxonomy of Training Data Issue Detection Techniques</em></p>
-</div>
-
-**📄 Papers Referenced in this Section:**
+## 🔍 RQ4
 
 1. LLMs Meet Library Evolution [2024-06] [[paper](https://arxiv.org/abs/2406.09834)]
 2. Less is More [2025-02] [[paper](https://arxiv.org/abs/2502.14212)]
@@ -408,41 +279,10 @@ Targets the integrity, provenance, and representativeness of the underlying trai
 97. COFFE [2025-02] [[paper](https://arxiv.org/abs/2502.02827)]
 98. AATK Benchmark [2021-08] [[paper](https://dl.acm.org/doi/10.1145/3610721)]
 
-### 🛠️ RQ5: Governance Strategies
+---
 
-We synthesize a **Multi-layered Governance Framework** spanning the entire data lifecycle and model inference stages to address quality defects:
+## 🛠️ RQ5
 
-#### 1. Code-Level Mitigation
-
-- **Model-level**: SFT, RLHF/DPO, Reward-based optimization (combining execution correctness with static metrics), and Regularization-based stabilization to prevent mode collapse.
-- **Generation-level**:
-  - _Pre-generation_: Prompt Engineering, RAG, and Agent-based workflows.
-  - _In-generation_: Adaptive decoding constraints and Iterative Self-reflection.
-  - _Post-generation_: Automated AST-level repairs and sandbox execution filtering.
-
-#### 2. Data-Level Mitigation
-
-- **Cleaning & Filtering**: Execution-feedback elimination, static rule sanitization, and LLM-driven semantic cleaning to remove noise and vulnerabilities.
-- **Data Balancing**: Stratified resampling across programming languages, domains, and difficulty levels to mitigate representation bias.
-- **Data Enhancement**: Using LLMs or formatting tools to refactor, add docstrings, and standardize existing low-quality code.
-- **Data Augmentation**: Expanding datasets via high-quality synthetic generation (rule/LLM-based) and integration of curated open-source repositories.
-
-<br>
-
-<div align="center">
-  <img src="images/generated_code_issues_detection.png" alt="Taxonomy of Code Issue Mitigation Strategies" width="100%">
-  <p><em>Fig. 8. Taxonomy of Code Issue Mitigation Strategies</em></p>
-</div>
-
-<br>
-
-<div align="center">
-  <img src="images/data_quality_issues_mitigation.png" alt="Taxonomy of Dataset Issue Mitigation Strategies" width="100%">
-  <p><em>Fig. 9. Taxonomy of Training Data Issue Mitigation Strategies</em></p>
-</div>
-
-**📄 Papers Referenced in this Section:**
- 
 1. LLMs Meet Library Evolution [2024-06] [[paper](https://arxiv.org/abs/2406.09834)]
 2. Less is More [2025-02] [[paper](https://arxiv.org/abs/2502.14212)]
 3. Qwen [2023-09] [[paper](https://arxiv.org/abs/2309.16609)]
@@ -507,11 +347,3 @@ We synthesize a **Multi-layered Governance Framework** spanning the entire data 
 62. COFFE [2025-02] [[paper](https://arxiv.org/abs/2502.02827)]
 
 ---
-
-## 🤝 Contribution
-
-We warmly welcome contributions from the community! If you have new research or have discovered missing classic papers, please follow these steps:
-
-1. Fork this repository.
-2. Add your paper to the corresponding RQ section following the existing table format.
-3. Submit a Pull Request.
