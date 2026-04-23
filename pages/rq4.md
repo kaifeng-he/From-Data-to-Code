@@ -17,7 +17,7 @@ Identifies defects in generated code (e.g., runtime failures, hallucinations, se
 - **Static Analysis**: Rule-based detection (via tools like SonarQube, Semgrep) and manual inspection to find syntax errors, vulnerabilities, and code smells without executing the code.
 - **Model-based Detection**: "LLM-as-a-judge" techniques (direct, prompt-engineered, or fine-tuned evaluation) and lightweight ML classifiers for scalable semantic filtering.
 
-<div align="center">
+<div class="img-container">
   <img src="{{ site.baseurl }}/images/generated_code_issues_detection.png" alt="Taxonomy of Code Issue Detection Methods" width="100%">
   <p><em>Fig. 6. Taxonomy of Code Issue Detection Techniques</em></p>
 </div>
@@ -30,7 +30,7 @@ Targets the integrity, provenance, and representativeness of the underlying trai
 - **Static Analysis**: Rule-based detection, human review, and provenance tracing (using file hashes to identify duplicate or benchmark-contaminated data).
 - **Model-based Detection**: High-throughput semantic screening using LLMs or lightweight classifiers to evaluate sample readability, information entropy, and potential hazards.
 
-<div align="center">
+<div class="img-container">
   <img src="{{ site.baseurl }}/images/data_quality_issues_detection.png" alt="Taxonomy of Dataset Issue Detection Methods" width="100%">
   <p><em>Fig. 7. Taxonomy of Training Data Issue Detection Techniques</em></p>
 </div>

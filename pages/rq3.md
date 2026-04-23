@@ -12,7 +12,7 @@ How do data defects cause code generation failures? We summarize **18 propagatio
 1. **Direct Mappings (10 types)**: The classic "garbage in, garbage out" replication. The model explicitly memorizes dataset flaws and replicates them.
 2. **Indirect Mappings (8 types)**: Insidious propagation. Non-code defects do not inject explicit errors but disrupt the model's internal representations via mechanisms such as _entropy collapse_, _representation bias_, or _semantic drift_.
 
-<div align="center">
+<div class="img-container">
   <img src="{{ site.baseurl }}/images/sankey.png" alt="Sankey Diagram of Mapping from Data Issues to Code Issues" width="100%">
   <p><em>Fig. 5. Mapping mechanisms from Training Data Issues to Generated Code Issues.</em></p>
 </div>

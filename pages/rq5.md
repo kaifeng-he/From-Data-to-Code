@@ -17,7 +17,7 @@ We synthesize a **Multi-layered Governance Framework** spanning the entire data 
   - _In-generation_: Adaptive decoding constraints and Iterative Self-reflection.
   - _Post-generation_: Automated AST-level repairs and sandbox execution filtering.
 
-<div align="center">
+<div class="img-container">
   <img src="{{ site.baseurl }}/images/generated_code_issues_detection.png" alt="Taxonomy of Code Issue Mitigation Strategies" width="100%">
   <p><em>Fig. 8. Taxonomy of Code Issue Mitigation Strategies</em></p>
 </div>
@@ -29,7 +29,7 @@ We synthesize a **Multi-layered Governance Framework** spanning the entire data 
 - **Data Enhancement**: Using LLMs or formatting tools to refactor, add docstrings, and standardize existing low-quality code.
 - **Data Augmentation**: Expanding datasets via high-quality synthetic generation (rule/LLM-based) and integration of curated open-source repositories.
 
-<div align="center">
+<div class="img-container">
   <img src="{{ site.baseurl }}/images/data_quality_issues_mitigation.png" alt="Taxonomy of Dataset Issue Mitigation Strategies" width="100%">
   <p><em>Fig. 9. Taxonomy of Training Data Issue Mitigation Strategies</em></p>
 </div>

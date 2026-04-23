@@ -1,0 +1,60 @@
+---
+---
+
+@import "just-the-docs";
+
+// Professional Typography & Spacing
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+// Beautify Abstract block
+.abstract-box {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-left: 5px solid #0056b3;
+  font-style: italic;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+}
+
+// Center and style figures
+figure, .img-container {
+  text-align: center;
+  margin: 2rem 0;
+  
+  img {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+  
+  p em {
+    display: block;
+    margin-top: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
+}
+
+// Clean up tables (papers referenced)
+table {
+  display: table;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #f1f3f5;
+  text-align: left;
+}
+
+// Navigation tweaks
+.nav-list-link {
+  font-weight: 500;
+}

@@ -19,7 +19,7 @@ We discard vague concepts like generic "code hallucination" and establish a unif
 8. **Parsimony of Output**: Conciseness of generated results, manifesting as redundant logic, useless loops, and extreme verbosity.
 9. **Miscellaneous**: Anomalies outside the core eight dimensions, primarily manifesting as instruction-following failures.
 
-<div align="center">
+<div class="img-container">
   <img src="{{ site.baseurl }}/images/generated_code_issues.png" alt="Taxonomy of Generated Code Quality Issues" width="100%">
   <p><em>Fig. 3. Taxonomy of Generated Code Quality Issues</em></p>
 </div>

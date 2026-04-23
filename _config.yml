@@ -11,6 +11,19 @@ plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
 
+# Theme customization
+color_scheme: light
+# Use a custom footer to hide the "Just the Docs" credit and add your links
+footer_content: >
+  <p><b>More to read:</b> 
+  <a href="https://github.com/SYSUSELab/From-Data-to-Code" target="_blank">GitHub Repository</a> | 
+  <a href="{{ site.baseurl }}/paper.pdf" target="_blank">Download Paper (PDF)</a>
+  </p>
+  <p class="text-small text-grey-dk-000 mb-0">© 2026 Bridging Generation and Training Review Team</p>
+
+last_edit_timestamp: true
+last_edit_label: "Last updated on"
+
 # Navigation structure
 nav_enabled: true
 enable_copy_button: true

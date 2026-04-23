@@ -18,7 +18,7 @@ We categorize intrinsic flaws within pre-training and fine-tuning corpora into *
    - **Data Contamination Risks**: Leakage of evaluation data, primarily manifesting as benchmark test sets embedded in training corpora.
    - **Low-Value Data**: Data contributing little or negatively to learning, categorized into meaningless text, format noise, low-information-density text, erroneous text, and incomplete data.
 
-<div align="center">
+<div class="img-container">
   <img src="{{ site.baseurl }}/images/data_quality_issues.png" alt="Taxonomy of Dataset Quality Issues" width="100%">
   <p><em>Fig. 4. Taxonomy of Training Data Quality Issues</em></p>
 </div>
