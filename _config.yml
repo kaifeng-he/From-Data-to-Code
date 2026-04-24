@@ -23,9 +23,6 @@ color_scheme: "dark"
 # Custom CSS
 sass:
   style: compressed
-aux_links:
-  "GitHub Repository":
-    - "https://github.com/SYSUSELab/From-Data-to-Code"
 
 # Heading anchor links
 heading_anchors: true

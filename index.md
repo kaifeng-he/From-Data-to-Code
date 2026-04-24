@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Overview
 nav_order: 1
 description: "Bridging Generation and Training: A Systematic Review of Quality Issues in LLMs for Code"
 permalink: /
@@ -32,12 +32,12 @@ Large language models (LLMs) frequently generate defective outputs in code gener
     <div style="font-size: 0.8rem; color: var(--text-muted);">Primary Studies Reviewed</div>
   </div>
   <div class="paper-card" style="margin-bottom: 0; text-align: center;">
-    <div style="font-size: 2rem; font-weight: 800; color: var(--accent-purple);">18</div>
-    <div style="font-size: 0.8rem; color: var(--text-muted);">Propagation Mechanisms</div>
-  </div>
-  <div class="paper-card" style="margin-bottom: 0; text-align: center;">
     <div style="font-size: 2rem; font-weight: 800; color: #3fb950;">9</div>
     <div style="font-size: 0.8rem; color: var(--text-muted);">Quality Dimensions</div>
+  </div>
+  <div class="paper-card" style="margin-bottom: 0; text-align: center;">
+    <div style="font-size: 2rem; font-weight: 800; color: var(--accent-purple);">18</div>
+    <div style="font-size: 0.8rem; color: var(--text-muted);">Propagation Mechanisms</div>
   </div>
 </div>
 
