@@ -44,9 +44,9 @@ Large language models (LLMs) frequently generate defective outputs in code gener
 ## 📖 Abstract
 
 <div class="abstract-box">
-This paper presents a systematic literature review of **114 primary studies** to investigate how training data quality issues propagate into code generation. We establish a unified taxonomy that categorizes generated code quality issues across nine dimensions and training data quality issues into code and non-code attributes. 
+This paper presents a systematic literature review of 114 primary studies to investigate how training data quality issues propagate into code generation. We establish a unified taxonomy that categorizes generated code quality issues across nine dimensions and training data quality issues into code and non-code attributes. 
 
-Based on this taxonomy, we formalize a causal framework detailing **18 typical propagation mapping mechanisms**. Furthermore, we synthesize state-of-the-art detection and mitigation techniques across the data, model, and generation lifecycles. 
+Based on this taxonomy, we formalize a causal framework detailing 18 typical propagation mapping mechanisms. Furthermore, we synthesize state-of-the-art detection and mitigation techniques across the data, model, and generation lifecycles. 
 </div>
 
 ---
